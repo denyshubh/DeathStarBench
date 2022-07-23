@@ -210,14 +210,18 @@ func (s *Server) MakeReservation(ctx context.Context, req *pb.Request) (*pb.Resu
 	for inDate.Before(outDate) {
 		inDate = inDate.AddDate(0, 0, 1)
 		outdate := inDate.String()[0:10]
-		err := c.Insert(&reservation{
-			HotelId:      hotelId,
-			CustomerName: req.CustomerName,
-			InDate:       indate,
-			OutDate:      outdate,
-			Number:       int(req.RoomNumber)})
-		if err != nil {
-			log.Panic().Msgf("Tried to insert hotel [hotelId %v], but got error", hotelId, err.Error())
+		RNCnt := int(req.RoomNumber)
+		for i := 0; i < 1; i++ {
+		  err := c.Insert(&reservation{
+			  HotelId:      hotelId,
+			  CustomerName: req.CustomerName,
+			  InDate:       indate,
+			  OutDate:      outdate,
+			  Number:       int(req.RoomNumber)})
+		  if err != nil {
+			  log.Panic().Msgf("Tried to insert hotel [hotelId %v], but got error", hotelId, err.Error())
+		  }
+		  RNCnt++
 		}
 		indate = outdate
 	}
