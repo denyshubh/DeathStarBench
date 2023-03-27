@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: search
+    app: search
   name: search
 spec:
   ports:

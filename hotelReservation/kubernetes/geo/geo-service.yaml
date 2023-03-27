@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: geo
+    app: geo
   name: geo
 spec:
   ports:

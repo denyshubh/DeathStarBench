@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: rate
+    app: rate
   name: rate
 spec:
   ports:
