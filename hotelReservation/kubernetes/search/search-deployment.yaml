@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: search
+    app: search
   name: search
 spec:
   replicas: 1
@@ -24,6 +25,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: search
+        app: search
     spec:
       containers:
         - command:

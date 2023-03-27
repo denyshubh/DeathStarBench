@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: mongodb-recommendation
+    app: mongodb-recommendation
   name: mongodb-recommendation
 spec:
   replicas: 1
@@ -25,6 +26,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: mongodb-recommendation
+        app: mongodb-recommendation
     spec:
       containers:
         - image: mongo:4.4.6

@@ -7,6 +7,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: memcached-rate
+    app: memcached-rate
   name: memcached-rate
 spec:
   replicas: 1
@@ -24,6 +25,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: memcached-rate
+        app: memcached-rate
     spec:
       containers:
         - env:
