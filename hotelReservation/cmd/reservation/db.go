@@ -41,6 +41,8 @@ func initializeDatabase(url string) *mgo.Session {
 		}
 	}
 
+	session.SetSafe(&mgo.Safe{J: true})
+
 	c = session.DB("reservation-db").C("number")
 	count, err = c.Find(&bson.M{"hotelId": "1"}).Count()
 	if err != nil {
