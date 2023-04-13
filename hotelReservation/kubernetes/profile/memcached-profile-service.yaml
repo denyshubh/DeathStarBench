@@ -11,7 +11,7 @@ metadata:
   name: memcached-profile
 spec:
   ports:
-    - name: "memcached-profile"
+    - name: "tcp-memcached-profile"
       port: 11211
       targetPort: 11211
   selector:
