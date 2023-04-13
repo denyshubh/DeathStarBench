@@ -11,7 +11,7 @@ metadata:
   name: user
 spec:
   ports:
-    - name: "8086"
+    - name: "tcp-8086"
       port: 8086
       targetPort: 8086
   selector:

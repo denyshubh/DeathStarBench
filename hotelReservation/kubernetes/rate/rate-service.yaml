@@ -11,7 +11,7 @@ metadata:
   name: rate
 spec:
   ports:
-    - name: "8084"
+    - name: "tcp-8084"
       port: 8084
       targetPort: 8084
   selector:

@@ -11,7 +11,7 @@ metadata:
   name: recommendation
 spec:
   ports:
-    - name: "8085"
+    - name: "tcp-8085"
       port: 8085
       targetPort: 8085
   selector:
